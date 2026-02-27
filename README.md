@@ -44,3 +44,57 @@ python src/train.py --config src/cr_xai/configs/baseline.yaml
 python src/evaluate.py --config src/cr_xai/configs/baseline.yaml --explain
 ```
 
+## Folder Layout
+
+```text
+controlroom-xai-alarm-support-transformer/
+├─ README.md
+├─ LICENSE
+├─ CITATION.cff
+├─ CODE_OF_CONDUCT.md
+├─ CONTRIBUTING.md
+├─ .gitignore
+├─ environment.yml           # or requirements.txt
+├─ pyproject.toml            # optional if you package src/
+├─ data/
+│  ├─ README.md              # where to download datasets; no raw data committed
+│  ├─ example/               # tiny synthetic snippets for tests only
+├─ src/
+│  ├─ cr_xai/                # your package
+│  │  ├─ __init__.py
+│  │  ├─ configs/            # yaml configs (paths, hyperparams)
+│  │  ├─ datasets/           # dataset loaders, parsers
+│  │  ├─ models/             # wrappers around the Transformer
+│  │  ├─ explainability/     # SHAP, counterfactuals (CAFE-like)
+│  │  ├─ evaluation/         # metrics, robustness, latency
+│  │  ├─ ui/                 # simple Dash/Gradio prototype for presentations
+│  │  └─ utils/              # logging, seeds, timing
+│  ├─ train.py               # training entry point
+│  ├─ evaluate.py            # technical evaluation
+│  └─ userstudy/             # SPAM/SART probes, logging, consent stubs
+├─ notebooks/
+│  ├─ 00_exploration.ipynb
+│  ├─ 10_training_demo.ipynb
+│  └─ 20_xai_examples.ipynb
+├─ third_party/
+│  └─ Anomaly_Detection_Transformer/   # as git submodule or fork
+├─ tests/
+│  ├─ test_data_loading.py
+│  ├─ test_model_forward.py
+│  └─ test_explainers.py
+├─ docs/
+│  ├─ index.md
+│  ├─ getting-started.md
+│  ├─ research-overview.md
+│  ├─ user-study.md
+│  ├─ xai-methods.md
+│  └─ api.md
+├─ mkdocs.yml
+└─ .github/
+   ├─ workflows/
+   │  ├─ ci.yml              # lint + tests
+   │  └─ docs.yml            # publish docs site
+   └─ ISSUE_TEMPLATE/
+      ├─ bug_report.md
+      └─ feature_request.md
+```
