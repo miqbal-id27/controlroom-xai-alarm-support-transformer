@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.env
+.venv
+# Data/outputs
+data/*/raw/
+outputs/
+# Notebooks
+.ipynb_checkpoints/
+# Submodule caches
+third_party/**/.ipynb_checkpoints
