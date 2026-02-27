@@ -1,4 +1,4 @@
-# cExplainable AI for Alarm Decision Support in Control Room Settings
+# Explainable AI for Alarm Decision Support in Control Room Settings
 Transformer‑based alarm decision support with Explainable AI for control room settings
 
 
