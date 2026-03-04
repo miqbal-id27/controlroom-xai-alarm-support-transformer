@@ -12,14 +12,14 @@ Transformer‑based alarm decision support with Explainable AI for control room 
 
 ## Why this project?
 
-Control rooms in high-stakes domains face alarm floods and data overload. We implement a **Transformer** anomaly model with **explanations** and evaluate both technically and with a user study (trust, workload, situational awareness). (Research background derived from our lit review & proposal.)¹
+Control rooms in high-stakes domains face alarm floods and data overload. We implement a **Transformer** anomaly model with **explanations** and evaluate both technically and with a user study (trust, workload, situational awareness).
 
 ## Model: Transformer
 
-**Transformer-based anomaly detector**, adapted from `arunbaruah/Anomaly_Detection_Transformer`.² We wrap it to operate on alarm/event sequences and provide XAI views.
+**Transformer-based anomaly detector**, adapted from `arunbaruah/Anomaly_Detection_Transformer`. We wrap it to operate on alarm/event sequences and provide XAI views.
 
-- Upstream repo (logs/Transformer, PyTorch).²
-- We expose a simple interface: `cr_xai.models.transformer_wrapper.TransformerAlarmModel`.
+- Upstream repo (logs/Transformer, PyTorch).
+- We expose a simple interface:
 
 ## Features
 
