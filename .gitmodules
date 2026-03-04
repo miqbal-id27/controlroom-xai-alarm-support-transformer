@@ -1,3 +1,6 @@
 [submodule "third_party/Anomaly_Detection_Transformer"]
 	path = third_party/Anomaly_Detection_Transformer
 	url = https://github.com/miqbal-id27/XAI_Anomaly_Detection_Transformer.git
+[submodule "log_anomaly_detection/XAI_Anomaly_Detection_Transformer"]
+	path = log_anomaly_detection/XAI_Anomaly_Detection_Transformer
+	url = https://github.com/miqbal-id27/XAI_Anomaly_Detection_Transformer.git
