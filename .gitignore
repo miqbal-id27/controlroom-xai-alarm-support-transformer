@@ -10,3 +10,7 @@ outputs/
 .ipynb_checkpoints/
 # Submodule caches
 third_party/**/.ipynb_checkpoints
+notebooks/Spell_result/
+notebooks/Model/*.pt
+pics/
+*.zip
