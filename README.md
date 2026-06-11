@@ -1,12 +1,9 @@
-# Explainable AI for Alarm Decision Support in Control Room Settings
-
-<p align="center">
-  <b>Transformer-based HDFS log anomaly detection with layered Explainable AI for operator-oriented decision support research.</b>
-</p>
+<h1 align="center">
+  Towards an Explainable Transformer-Based Framework for HDFS Log Anomaly Detection
+</h1>
 
 <p align="center">
   <a href="https://github.com/arunbaruah/Anomaly_Detection_Transformer">Base Transformer implementation</a> ·
-  <a href="./docs/research-overview.md">Research overview</a> ·
   <a href="./docs/getting-started.md">Getting started</a>
 </p>
 
@@ -20,10 +17,6 @@
 ---
 
 ## Overview
-
-This repository supports the research project:
-
-> **Towards an Explainable Transformer-Based Framework for HDFS Log Anomaly Detection**
 
 The project investigates how an existing Transformer-based HDFS anomaly detector can be explained using a layered workflow grounded in both **model behaviour** and **HDFS event semantics**.
 
@@ -47,12 +40,6 @@ This project uses the public **LogHub HDFS benchmark** as a reproducible proxy f
 
 ---
 
-## Tech Stack
-
-`Python` · `PyTorch` · `Transformer` · `SHAP` · `pandas` · `NumPy` · `scikit-learn` · `Jupyter Notebook` · `LogHub HDFS` · `Spell Parser` · `Matplotlib` · `Git` · `GitHub`
-
----
-
 ## Research Workflow
 
 ```mermaid
@@ -60,7 +47,7 @@ flowchart TD
     A[Raw HDFS Logs] --> B[Spell Log Parsing]
     B --> C[Event Templates]
     C --> D[EventID Sequences]
-    D --> E[Transformer Next-Event Prediction]
+    D --> E[Transormer Next Prediction]
     E --> F[Top-k Anomaly Decision]
     F --> G[Prediction-Level Results]
 
@@ -68,9 +55,9 @@ flowchart TD
     G --> I[SHAP Local Attribution]
     I --> J[Perturbation Sanity Check]
 
-    H --> K[Operator-Oriented Translator]
+    H --> K[Operator Translator]
     J --> K
-    K --> L[Concise Explanation Message]
+    K --> L[Explanation Message]
 ```
 
 ---
@@ -86,46 +73,6 @@ The project replaces the private baseline HDFS workflow with a reproducible publ
 <p align="center">
   <i>Figure: Public-data regeneration workflow for validated Transformer training and explanation analysis.</i>
 </p>
-
-<details>
-<summary><b>View workflow explanation</b></summary>
-
-The workflow follows these steps:
-
-1. Extract reference distributions from the baseline HDFS workflow:
-   - normal/abnormal ratio
-   - train/test ratio
-   - sequence length
-   - EventID-rank distribution
-   - rare EventID coverage
-
-2. Use the public LogHub HDFS benchmark as the reproducible data source.
-
-3. Regenerate public splits:
-   - training set
-   - normal-test set
-   - abnormal-test set
-
-4. Validate regenerated splits using distributional comparison.
-
-5. If the regenerated splits are aligned with the reference distributions, accept them for Transformer training and explanation analysis.
-
-6. If the regenerated splits are not aligned, revise the split/parsing assumptions and iterate.
-
-</details>
-
-```mermaid
-flowchart LR
-    A[Baseline HDFS Workflow] --> B[Extract Reference Distributions<br/>normal/abnormal ratio<br/>train/test ratio<br/>sequence length<br/>EventID-rank distribution<br/>rare EventID coverage]
-    B --> C[Public LogHub HDFS Benchmark]
-    C --> D[Regenerate Public Splits<br/>train<br/>normal test<br/>abnormal test]
-    D --> E[Distributional Validation]
-    E --> F{Aligned with<br/>reference distributions?}
-    F -->|Aligned| G[Accept Regenerated Splits]
-    G --> H[Validated Dataset for<br/>Transformer Training and<br/>Explanation Analysis]
-    F -->|Not Aligned| I[Revise Split/Parsing Assumptions]
-    I --> D
-```
 
 ---
 
@@ -417,11 +364,11 @@ This repository is a research prototype.
 If you use this repository, please cite:
 
 ```bibtex
-@misc{iqbal2026explainable,
+@misc{iqbal2026hdfs-transformer,
   title  = {Towards an Explainable Transformer-Based Framework for HDFS Log Anomaly Detection},
   author = {Iqbal, Muhammad},
   year   = {2026},
-  note   = {Monash University research project}
+  note   = {Monash University Minor Thesis}
 }
 ```
 
