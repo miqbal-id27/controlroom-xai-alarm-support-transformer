@@ -12,4 +12,8 @@ outputs/
 third_party/**/.ipynb_checkpoints
 notebooks/Spell_result/
 notebooks/Model/*.pt
+<<<<<<< HEAD
 *.zip
+=======
+*.zip
+>>>>>>> a024389a7c658a6f9b216d8b3579a470fadcab41
