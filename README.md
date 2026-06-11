@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/arunbaruah/Anomaly_Detection_Transformer">Base Transformer implementation</a> ·
+  <a href="https://github.com/logpai/loghub/tree/master">Loghub Datasets</a>
   <a href="./docs/getting-started.md">Getting started</a>
 </p>
 
